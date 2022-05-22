@@ -1,6 +1,6 @@
 import requests
 import json
-import acc_token  # 別ファイルでラインのアクセストークンを管理しています。
+import acc_token  # 別ファイルでLineのトークンを管理する
 
 
 # テキストを取得する
@@ -31,6 +31,6 @@ def send_line(send_txt):
 if __name__ == "__main__":
     url = requests.get('https://api.aoikujira.com/tenki/week.php?fmt=json&city=319')
     data = json.loads(url.text)
-    day_list = [0, 1]  # 当日が0, 次の日が1となります。
+    day_list = [0, 1]  # 当日が0, 次の日が1となる
     send_txt = (get_weather(day_list))
     send_line(send_txt)
