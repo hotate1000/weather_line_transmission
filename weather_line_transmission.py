@@ -1,6 +1,6 @@
 import requests
 import json
-import acc_token  # 別ファイルでLineのトークンを管理する
+import acc_token  # 別ファイルでLineのトークンを管理している
 
 
 # テキストを取得する
